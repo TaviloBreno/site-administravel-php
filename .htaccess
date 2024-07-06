@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^$ /php_orientado_a_objetos/site/ [L]

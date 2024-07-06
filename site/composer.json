@@ -1,0 +1,17 @@
+{
+    "description": "Projeto Celke",
+    "authors": [
+        {
+            "name": "Cesar Szpak",
+            "email": "cesar@celke.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app",
+            "Sts\\": "app/sts"
+        }
+    },
+    "require": {}
+}
