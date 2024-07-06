@@ -24,6 +24,35 @@ Acesse `http://localhost:8000` em seu navegador para acessar a aplicação.
 
 Para configurar o PHPulse CMS para diferentes ambientes (produção, desenvolvimento, etc.), é necessário ajustar os arquivos de configuração localizados em `site/core/config.php` e `adm/core/config.php`.
 
+### Configuração do Banco de Dados
+
+Para configurar o banco de dados necessário para o PHPulse CMS, siga os passos abaixo:
+
+1. **Importar o Banco de Dados:**
+   - Utilize o arquivo SQL fornecido (`database.sql`) para importar a estrutura e os dados iniciais do banco de dados. Você pode importar o arquivo usando o phpMyAdmin ou via linha de comando no MySQL:
+
+     ```bash
+     mysql -u seu_usuario -p sua_base_de_dados < database.sql
+     ```
+
+2. **Configurar as Credenciais de Conexão:**
+   - Edite o arquivo `config.php` localizado em `site/core/` e `adm/core/` para ajustar as credenciais de conexão com o banco de dados de acordo com as configurações do seu ambiente:
+
+     ```php
+     <?php
+     // site/core/config.php
+
+     define('DB_HOST', 'seu_host');
+     define('DB_USER', 'seu_usuario');
+     define('DB_PASS', 'sua_senha');
+     define('DB_NAME', 'seu_banco_de_dados');
+     ```
+
+3. **Configuração Adicional:**
+   - Certifique-se de que o PHP esteja configurado corretamente com a versão compatível com o PHP 8.0 ou superior, conforme indicado nas informações do banco de dados.
+
+---
+
 ---
 
 ### Licença
